@@ -42,6 +42,17 @@ class SLL {
         // return this.head ? this.head.data : null;
     }
 }
+// Create display() that uses a while loop and a runner to return a string containing all list values. Build what you wish console.log(myList) did!
+    display() {
+        var runner = this.head;
+        var str = "";
+        while (runner != null) {
+            str += runner.data + " ";
+            runner = runner.next;
+        }
+        return str;
+    }
+
 }
 
 var SLL1 = new SLL();
@@ -51,6 +62,7 @@ console.log(SLL1.front())
 // SLL1.addFront(5) 
 // console.log(SLL1)
 SLL1.addFront(73) 
+console.log(SLL1.display())
 // SLL1.removeFront() 
 console.log(SLL1)
 // SLL1.front(18) 
